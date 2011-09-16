@@ -428,10 +428,10 @@ static void print_html_element(GString *out, element *elt, bool obfuscate) {
                 /* Assign footnote number for future use */
                 elt->children->contents.str = strdup(buf);
                 if (elt->children->key == GLOSSARYTERM) {
-                    g_string_append_printf(out, "<a href=\"#fn:%d\" id=\"fnref:%d\" title=\"see footnote\" class=\"footnote glossary\">[%d]</a>",
+                    g_string_append_printf(out, "<a href=\"#fn:%d\" id=\"fnref:%d\" title=\"see footnote\" class=\"footnote glossary\">%d</a>",
                                 notenumber, notenumber, notenumber);
                 } else {
-                    g_string_append_printf(out, "<a href=\"#fn:%d\" id=\"fnref:%d\" title=\"see footnote\" class=\"footnote\">[%d]</a>",
+                    g_string_append_printf(out, "<a href=\"#fn:%d\" id=\"fnref:%d\" title=\"see footnote\" class=\"footnote\">%d</a>",
                                 notenumber, notenumber, notenumber);
                 }
             } else {
